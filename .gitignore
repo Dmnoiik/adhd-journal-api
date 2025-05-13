@@ -19,3 +19,6 @@ Thumbs.db
 
 # Dotnet secrets
 secrets.json
+
+#database
+adhd.db

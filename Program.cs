@@ -2,15 +2,22 @@ using AdhdJournalApi.Data;
 using AdhdJournalApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using SQLitePCL;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
+Batteries.Init();
+
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+//builder.Services.AddDbContext<AppDbContext>(
+//    options => options.UseSqlServer(connectionString));
+
 builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseSqlServer(connectionString));
+    options => options.UseSqlite("Data Source=adhd.db"));
 
 builder.Services.AddScoped<IJournalEntryService, JournalEntryService>();
 
