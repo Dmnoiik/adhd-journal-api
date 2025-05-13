@@ -1,0 +1,21 @@
+# Build
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.dbmdl
+.vs/
+*.log
+
+# Angular
+dist/
+node_modules/
+
+# Systemowe
+.DS_Store
+Thumbs.db
+
+# Dotnet secrets
+secrets.json
