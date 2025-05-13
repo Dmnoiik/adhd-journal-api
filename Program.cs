@@ -16,6 +16,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 //builder.Services.AddDbContext<AppDbContext>(
 //    options => options.UseSqlServer(connectionString));
 
+var dbPath = Path.Combine(Environment.CurrentDirectory, "adhd.db");
+
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseSqlite("Data Source=adhd.db"));
 

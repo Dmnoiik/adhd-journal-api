@@ -64,6 +64,12 @@ namespace AdhdJournalApi.Controllers
             return NoContent();
         }
 
+        [HttpGet("ping")]
+        public IActionResult Ping()
+        {
+            return Ok("Ping works");
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEntry(int id)
         {
