@@ -2,7 +2,7 @@ name: Build and deploy .NET Core application to Web App adhd-journal-api
 on:
   push:
     branches:
-    - master
+    - main
 env:
   AZURE_WEBAPP_NAME: adhd-journal-api
   AZURE_WEBAPP_PACKAGE_PATH: AdhdJournalApi\publish
